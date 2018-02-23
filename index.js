@@ -1,9 +1,12 @@
 
 // Entry file
+const sc = require('./scaffold');
 
-
-exports = function(){
-
-  //this.
-
-}
+sc.scaffold(
+  {
+    test: 'test1',
+    dir1: {
+      test: 'test2'
+    }
+  }
+);

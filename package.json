@@ -4,7 +4,7 @@
   "description": "A Primitive PHP/JS Scaffolding Module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node index.js"
   },
   "bin": {
     "init": "bin/init.js"
