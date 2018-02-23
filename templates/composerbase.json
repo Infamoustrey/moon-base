@@ -1,0 +1,10 @@
+{
+    "name": "infamoustrey/base",
+    "description": "default-description",
+    "keywords": ["panda"],
+    "type": "library",
+    "license": "MIT",
+    "authors": {
+            "name": "Trey Foster"
+    }
+}
