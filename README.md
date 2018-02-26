@@ -1,5 +1,5 @@
 
-<div style="text-align:center"><img src ="https://imgur.com/a/U7pxO" /></div>
+<div style="text-align:center"><img src ="moon-base.png?raw=true" /></div>
 
 # moon-base
 > A PHP/JS Scaffolding Module, written by Trey Foster
