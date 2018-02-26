@@ -1,5 +1,5 @@
 
-<div style="text-align:center; max-width:200px;"><img src ="moon-base.png?raw=true" /></div>
+![](moon-base.png | width=250)
 
 # moon-base
 > A PHP/JS Scaffolding Module, written by Trey Foster
