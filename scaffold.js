@@ -1,11 +1,13 @@
 
+const fs = require('fs');
+
 exports.scaffold = function(structure){
 
       recurse(structure);
 
 }
 
-function recurse(structure){
+function recurse(structure, parent = ''){
 
   if( typeof structure  === 'object'){
 
@@ -14,13 +16,21 @@ function recurse(structure){
 
           if(typeof structure[property] === 'object'){
 
-              createDirectory(property);
-
-              recurse(structure[property]);
+              if (parent === '') {
+                  createDirectory(property);
+                  recurse(structure[property], property);
+              }else{
+                   createDirectory(parent + '/' + property);
+                   recurse(structure[property], parent + '/' + property);
+              }
 
           }else if(typeof structure[property] === 'string'){
 
-              createFile(structure[property]);
+              if (parent === '') {
+                  createFile(structure[property]);
+              }else{
+                  createFile(parent + '/' + structure[property]);
+              }
 
           }
 
@@ -37,6 +47,18 @@ function recurse(structure){
 
 function createFile(filename){
 
-    console.log('Created File: ',filename);
+    fs.writeFile(filename, 'Test file', (err) => {
+      if (err) throw err;
+      console.log('Created File: ', filename);
+    });
+
+}
+
+function createDirectory(dirpath){
+
+    fs.mkdir(dirpath, err => {
+      if (err) throw err;
+      console.log('Created Directory: ', dirpath);
+    });
 
 }
